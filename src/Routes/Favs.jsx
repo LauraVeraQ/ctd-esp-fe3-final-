@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 const Favs = () => {
   let favorites = JSON.parse(localStorage.getItem("favorites"))
-  console.log('favorites', favorites)
-  console.log('pasa')
   return (
     <>
       <h1>Dentists Favs</h1>
@@ -14,7 +12,7 @@ const Favs = () => {
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
         {favorites.map((favorite) => (
-          <div className="card ">
+          <div className="card" key={favorite.id}>
             <Link to={'detail/' + favorite.id}>
               <img src="../assets/doctor.jpg" alt="Imagen odontologo"></img>
               <h1 className="">{favorite.name}</h1>
