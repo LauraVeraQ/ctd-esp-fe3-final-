@@ -12,11 +12,11 @@ const Footer = () => {
         <p>Powered by</p>
         <img src={dh} alt='DH-logo' width='120px' className='mb-4'/>
       </div>
-      <div className='flex'>
-        <img src={fb} alt='DH-logo' width='30px' className='m-2'/>
-        <img src={ins} alt='DH-logo' width='30px' className='m-2'/>
-        <img src={tk} alt='DH-logo' width='30px' className='m-2'/>
-        <img src={wa} alt='DH-logo' width='30px' className='m-2'/>
+      <div className='flex bg-black dark:bg-transparent'>
+        <img src={fb} alt='Redes' width='30px' className='m-2'/>
+        <img src={ins} alt='Redes' width='30px' className='m-2'/>
+        <img src={tk} alt='Redes' width='30px' className='m-2'/>
+        <img src={wa} alt='Redes' width='30px' className='m-2'/>
       </div>
     </footer>
   )

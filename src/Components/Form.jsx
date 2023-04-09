@@ -30,10 +30,10 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className='flex flex-col justify-center items-center'>
-        <label className='mx-5 my-3'>Nombre completo: </label>
-        <input  className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72' type='text' onChange={handleChangeName} value={nombre} required/>
-        <label className='mx-5 my-3'>Email: </label>
-        <input  className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72' type='email' onChange={handleChangeEmail} value={email} required/>
+        <label className='mx-5 my-3' htmlFor="nombreCompleto">Nombre completo: </label>
+        <input className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72 dark:text-black' type='text' onChange={handleChangeName} value={nombre} required/>
+        <label className='mx-5 my-3' htmlFor="email">Email: </label>
+        <input className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72 dark:text-black' type='email' onChange={handleChangeEmail} value={email} required/>
         </div>
         <div className="flex flex-col justify-center items-center">
             <input className='border-2 border-black my-5 px-3 py-2 rounded-md dark:border-white' type='submit' value="Enviar"/>
