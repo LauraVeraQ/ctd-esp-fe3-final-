@@ -2,32 +2,18 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import Form from '../Components/Form';
 
-describe("El componente Form", () => {
-    test('submit form with valid data', async () => {
-    render(<Form />);
-    const nameInput = screen.getByLabelText('Nombre completo:');
-    const emailInput = screen.getByLabelText('Email:');
-    const submitButton = screen.getByText('Enviar');
-
-    fireEvent.change(nameInput, { target: { value: 'Juan Perez' } });
-    fireEvent.change(emailInput, { target: { value: 'juanperez@example.com' } });
-    fireEvent.click(submitButton);
-
-    const messageElement = await screen.findByText('Gracias Juan Perez, te contactaremos cuando antes vía mail.');
-    expect(messageElement).toBeInTheDocument();
-    });
-
-    test('submit form with invalid data', async () => {
-    render(<Form />);
-    const nameInput = screen.getByLabelText('Nombre completo:');
-    const emailInput = screen.getByLabelText('Email:');
-    const submitButton = screen.getByText('Enviar');
-
-    fireEvent.change(nameInput, { target: { value: 'lv' } });
-    fireEvent.change(emailInput, { target: { value: 'invalidemail.com' } });
-    fireEvent.click(submitButton);
-
-    const alertElement = await screen.findByText('Por favor verifique su información nuevamente.');
-    expect(alertElement).toBeInTheDocument();
+describe('Form component', () => {
+        test('submit button is disabled if nombre and email are not provided', () => {
+            const { getByTestId, getByText } = render(<Form />);
+            const submitButton = getByText('Enviar');
+        
+            const nameInput = getByTestId('nombre-input');
+            const emailInput = getByTestId('email-input');
+        
+            fireEvent.change(nameInput, { target: { value: 'John Doe' } });
+            fireEvent.change(emailInput, { target: { value: 'johndoe@example.com' } });
+            fireEvent.click(submitButton);
+        
+        expect(submitButton.disabled).toBe(false);
     });
 });

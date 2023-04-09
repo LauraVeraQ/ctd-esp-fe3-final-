@@ -31,9 +31,9 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <div className='flex flex-col justify-center items-center'>
         <label className='mx-5 my-3' htmlFor="nombreCompleto">Nombre completo: </label>
-        <input className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72 dark:text-black' type='text' onChange={handleChangeName} value={nombre} required/>
+        <input className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72 dark:text-black' data-testid='nombre-input' type='text' onChange={handleChangeName} name='nombreCompleto' value={nombre} required/>
         <label className='mx-5 my-3' htmlFor="email">Email: </label>
-        <input className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72 dark:text-black' type='email' onChange={handleChangeEmail} value={email} required/>
+        <input className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72 dark:text-black' data-testid='email-input' type='email' onChange={handleChangeEmail} name='email' value={email} required/>
         </div>
         <div className="flex flex-col justify-center items-center">
             <input className='border-2 border-black my-5 px-3 py-2 rounded-md dark:border-white' type='submit' value="Enviar"/>
