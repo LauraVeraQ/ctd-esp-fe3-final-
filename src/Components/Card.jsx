@@ -26,7 +26,7 @@ const Card = ({ name, username, id }) => {
 
   return (
     
-    <div className="card ">
+    <div className="card my-5 ">
         {/* En cada card deberan mostrar en name - username y el id */}
 
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
@@ -34,11 +34,11 @@ const Card = ({ name, username, id }) => {
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         <Link to={'detail/' + id}>
           <img src={doctor} alt="Imagen odontologo"></img>
-          <h1 className="">{name}</h1>
-          <h2>{username}</h2>
-          <h3>{id}</h3>
+          <h1 className="bg-white text-black dark:bg-black dark:text-white text-center text-lg">{name}</h1>
+          <h2 className="bg-white text-black dark:bg-black dark:text-white text-center text-lg font-bold">{username}</h2>
+          <h3 className="bg-white text-black dark:bg-black dark:text-white text-center">{id}</h3>
         </Link>
-        <button onClick={() => addFavorite(name, username, id)} className="favButton">Add fav</button>
+        <button onClick={() => addFavorite(name, username, id)} className="border-2 border-black rounded-md px-3 py-2 text-sm dark:border-white my-4">Add fav</button>
     </div>
     
   );

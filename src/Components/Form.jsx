@@ -18,7 +18,7 @@ const Form = () => {
     e.preventDefault();
     if(nombre.length <= 4 || nombre[0] === " "){
         setAlerta(true)
-        setMensajeAlerta("Por favor verifique su información nuevamente")
+        setMensajeAlerta("Por favor verifique su información nuevamente.")
     }
     if (nombre.length >= 5 && nombre[0] !== " ") {
         setAlerta(false)
@@ -29,16 +29,16 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className='flex flex-col'>
-        <label className=''>Nombre completo: </label>
-        <input  className='border-2 border-black' type='text' onChange={handleChangeName} value={nombre} required/>
-        <label className=''>email: </label>
-        <input  className='border-2 border-black' type='email' onChange={handleChangeEmail} value={email} required/>
+        <div className='flex flex-col justify-center items-center'>
+        <label className='mx-5 my-3'>Nombre completo: </label>
+        <input  className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72' type='text' onChange={handleChangeName} value={nombre} required/>
+        <label className='mx-5 my-3'>Email: </label>
+        <input  className='pl-2 rounded-md mx-5 my-3 border-2 border-black w-72' type='email' onChange={handleChangeEmail} value={email} required/>
         </div>
-        <div>
-            <input className='border-2 border-black my-5 px-3 py-2 rounded-md' type='submit' value="Enviar"/>
-            {alerta && <div className='mt-2 mb-2 text-red-600'>{mensajeAlerta}</div>}
-            {enviado && <div className='mt-2 mb-2 text-red-600'>{`Gracias ${nombre}, te contactaremos cuando antes vía mail`}</div>}
+        <div className="flex flex-col justify-center items-center">
+            <input className='border-2 border-black my-5 px-3 py-2 rounded-md dark:border-white' type='submit' value="Enviar"/>
+            {alerta && <div className='mt-2 mb-2 text-red-600 font-bold'>{mensajeAlerta}</div>}
+            {enviado && <div className='mt-2 mb-2 dark:text-white text-black font-bold'>{`Gracias ${nombre}, te contactaremos cuando antes vía mail.`}</div>}
         </div>
       </form>
     </div>

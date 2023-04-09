@@ -1,11 +1,23 @@
 import React from 'react'
-// import DH from '../assets/DH.png'
+import dh from '../assets/DH.png';
+import fb from '../assets/ico-facebook.png';
+import ins from '../assets/ico-instagram.png';
+import tk from '../assets/ico-tiktok.png';
+import wa from '../assets/ico-whatsapp.png';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='flex justify-between my-7 mx-5 dark:border-none border-t-2 border-black'>
+      <div className='flex'>
         <p>Powered by</p>
-        <img src='../assets/DH.png' alt='DH-logo' />
+        <img src={dh} alt='DH-logo' width='120px' className='mb-4'/>
+      </div>
+      <div className='flex'>
+        <img src={fb} alt='DH-logo' width='30px' className='m-2'/>
+        <img src={ins} alt='DH-logo' width='30px' className='m-2'/>
+        <img src={tk} alt='DH-logo' width='30px' className='m-2'/>
+        <img src={wa} alt='DH-logo' width='30px' className='m-2'/>
+      </div>
     </footer>
   )
 }

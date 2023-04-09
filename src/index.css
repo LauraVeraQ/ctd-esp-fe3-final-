@@ -15,13 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
+/* .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
-}
+} */
 
 h1{
   text-align: center;
@@ -29,7 +29,7 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
+  /* width: 80vw; */
   justify-content: flex-start;
   padding: 1rem;
 }
@@ -44,7 +44,7 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
-footer {
+/* footer {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -58,6 +58,7 @@ footer {
 
 footer > img{
   width: 200px;
+  height: 50px;
   margin: 0;
 }
 footer > p{
@@ -72,7 +73,7 @@ form{
   width: 300px;
   height: 100px;
   margin: 0 auto;
-}
+} */
 
 .card{
   display: flex;

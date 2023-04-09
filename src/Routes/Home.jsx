@@ -18,8 +18,8 @@ const Home = () => {
     getDentists();
   },[])
   return (
-    <main className="" >
-      <h1>Home</h1>
+    <main>
+      <h1 className='text-2xl'>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
         {dentists.map((el)=> {

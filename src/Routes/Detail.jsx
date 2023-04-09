@@ -12,7 +12,6 @@ const Detail = () => {
   const getDentist = async()=>{
     const data = await fetch("https://jsonplaceholder.typicode.com/users/" + params.id)
       .then((response)=>{
-      // console.log('response', response)
       return response.json()
     })
     setDentist(data)
@@ -23,13 +22,15 @@ const Detail = () => {
   },[])
   return (
     <>
-      <h1>Detail Dentist id </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      <h1>{dentist.name}</h1>
-      <p>{dentist.email}</p>
-      <p>{dentist.phone}</p>
-      <p>{dentist.website}</p>
+    <h1 className='text-2xl'>Detail Dentist id </h1>
+    <div className="mt-5">
+        {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
+        {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+        <h1 className='className="bg-white text-black dark:bg-black dark:text-white text-center text-3xl font-bold mt-10'>{dentist.name}</h1>
+        <p className='className="bg-white text-black dark:bg-black dark:text-white text-center pt-2 text-lg mt-5'>{dentist.email}</p>
+        <p className='className="bg-white text-black dark:bg-black dark:text-white text-center pt-2 text-lg'>{dentist.phone}</p>
+        <p className='className="bg-white text-black dark:bg-black dark:text-white text-center pt-2 text-lg underline'>{dentist.website}</p>
+      </div>
     </>
   )
 }
